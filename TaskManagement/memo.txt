@@ -1,0 +1,32 @@
+project_root
+├ config              # 設定ディレクトリ
+│ │ settings.py       # 設定
+│ │ urls.py           # ルーティング設定
+│ └ wsgi.py           # 本番環境での起動ファイル
+│
+├ app                 # アプリ ディレクトリ
+│ ├ migrations        # データベース定義
+│ ├ static            # 静的ファイル(img/js/css)
+│ ├ templates
+│ │ └ app             # 画面テンプレート
+│ │   │ _base.html                 # 共通部品
+│ │   │ _pagination.html           # ページネーション部品
+│ │   │ item_confirm_delete.html   # 削除画面
+│ │   │ item_detail.html           # 詳細画面
+│ │   │ item_detail_contents.html  # 詳細・削除画面 共通部品 【★】
+│ │   │ item_filter.html           # 検索一覧画面 【★】
+│ │   └ item_form.html             # 新規登録・更新画面
+│ │
+│ ├ templatetags      # テンプレートタグ
+│ │ admin.py          # 管理アプリ用定義
+│ │ apps.py           # アプリ設定
+│ │ filters.py        # 検索
+│ │ forms.py          # 入力フォーム
+│ │ models.py         # モデル【★】
+│ │ tests.py          # テスト
+│ │ urls.py           # ルーティング設定
+│ └ views.py          # ビュー(MVCでのコントローラ)
+│
+├ users               # ユーザー管理用アプリ ディレクトリ
+│
+└ manage.py           # 管理コマンド
